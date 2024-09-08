@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 const ConfigBox = ({ content, deleteText, reLine }) => {
+  // fixNum은 사용할 필요가 없음, 왜냐하면 content.id는 변하지 않는 값이기 때문에
+  // 따로 저장해둘 필요 없이 그때그때 content.id로 쓰면 됨
   const [fixNum, setFixNum] = useState(content.id);
   const [fixText, setFixText] = useState("");
   const [changeUp, setChangeUp] = useState(false);
